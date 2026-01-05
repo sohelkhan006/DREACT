@@ -2,13 +2,13 @@ import './product.css'
 import Product from './Product'
 
 function ProductTab (){
-    let options = [<li>fast</li>,<li>durable</li>];
-    // let option = ["hi-tech","fast","durable"];
+   
     return (
         <>
-        <Product title="Phone" price={20000} features={options} />
-        <Product title="Laptop" price={70000}/>
-        <Product title="Tablet" price={35000}/>
+        <Product title="LogitechmX Master" idx={0} />
+        <Product title="Apple pencil (2nd gen)" idx={1}/>
+        <Product title="Zebronics Zeb- Transformer" idx={2}/>
+        <Product title="Portonics toad 23" idx={3}/>
         </>
     );
 }

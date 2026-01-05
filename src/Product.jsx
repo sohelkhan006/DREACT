@@ -1,15 +1,14 @@
 import'./Product.css'
+import Price from './Price';
 
-function Product ({title, price, features}){
-    // const list = features.map((feature) => <li>{feature}</li>); --> Generally it is used(write logic directly inside the element)
-    let isDiscount = price > 40000;
-    let styles = {backgroundColor : isDiscount ? "pink" : "" };
+function Product ({title, idx}){
+    let oldPrices = ["12,500","11,900","1,599","599"];
+    let newPrices = ["8,999","10,000","1,399","399"];
     return (
-        <div className='product-container' style={styles}>
-        <h1>{title}</h1>
-        <h5>Price: {price}</h5>
-        <p>{features}</p>
-        {isDiscount ? <p>Discout of 5%</p> : null}
+        <div className='product' >
+        <h4>{title}</h4>
+        <p>Description</p>
+        <Price oldPrice={oldPrices[idx]} newPrice={newPrices[idx]}/>
 
         </div>
     );
